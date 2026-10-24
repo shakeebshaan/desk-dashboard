@@ -1,0 +1,14 @@
+{
+  "name": "desk-dashboard",
+  "private": true,
+  "version": "0.3.2",
+  "description": "An old Android phone as an always-on desk dashboard, driven by a Telegram bot through an end-to-end encrypted relay.",
+  "license": "MIT",
+  "scripts": {
+    "test": "npm --prefix hub test",
+    "e2e": "node scripts/e2e.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.64.1"
+  }
+}

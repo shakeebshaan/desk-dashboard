@@ -1,0 +1,26 @@
+{
+  "name": "desk-dashboard-app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Phone dashboard UI (plain ES modules in www/, no bundler) wrapped with Capacitor for Android.",
+  "scripts": {
+    "vendor": "node scripts/vendor.js",
+    "sync": "node scripts/vendor.js && npx cap sync android"
+  },
+  "dependencies": {
+    "@capacitor-community/keep-awake": "^7.1.0",
+    "@capacitor-community/text-to-speech": "^6.1.0",
+    "@capacitor/android": "^7.6.9",
+    "@capacitor/app": "^7.1.2",
+    "@capacitor/cli": "^7.6.9",
+    "@capacitor/core": "^7.6.9",
+    "@capacitor/device": "^7.0.5",
+    "@capacitor/haptics": "^7.0.5",
+    "@capacitor/local-notifications": "^7.0.7",
+    "@capacitor/network": "^7.0.4",
+    "@capacitor/preferences": "^7.0.4",
+    "three": "^0.186.1",
+    "tweetnacl": "1.0.3"
+  }
+}

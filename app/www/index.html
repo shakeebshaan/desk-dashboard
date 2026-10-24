@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <!-- The permanent shell. Everything the user sees is the UI bundle: the one built into the APK (app/) or a newer
+       one the hub pushed, signed with its UI key (shell/boot.js, docs/SECURITY.md). No CDN, fonts, analytics or
+       third-party calls; the only network peer is the relay (ntfy.sh), which carries end-to-end sealed data only.
+       Exception, only on the owner's /play: the YouTube privacy-enhanced embed, or the https video link he sent.
+       127.0.0.1 is for tests. blob: scripts are the verified pushed bundle. Custom widgets get their own, stricter
+       CSP inside a sandboxed iframe. -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:;
+                 connect-src 'self' https://ntfy.sh wss://ntfy.sh http://127.0.0.1:* ws://127.0.0.1:*; frame-src 'self' about: blob: data: https://www.youtube-nocookie.com; media-src 'self' data: blob: https: http://127.0.0.1:*;
+                 object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="theme-color" content="#05070d">
+  <title>Dashboard</title>
+  <link rel="icon" href="data:,">
+  <style>html, body { margin: 0; background: #05070d; color: #e8ecf5; }</style>
+  <script src="vendor/nacl-fast.min.js"></script>
+  <script src="shell/uikey.js"></script>
+  <script src="shell/verify.js"></script>
+  <script src="shell/boot.js"></script>
+</head>
+<body data-theme="aurora"></body>
+</html>
